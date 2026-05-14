@@ -1,0 +1,5 @@
+1. open cmd
+2. uv init project_name (run this command, it creates a project directory with some files)
+3. uv add fastapi[standard] (installs fastapi with additional tools)
+4. code . (opens vscode)
+5. cont'd...
