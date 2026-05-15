@@ -108,3 +108,43 @@ code . (make sure you're in the project directory which you wanna open in vscode
 
 for day3, continue from 8:12 (of video)
 
+DAY 3 - 14th MAY 2026 (~ 25mins)
+
+NOTES:
+today, i built basic fastapi application with two lines of code.
+then i created a home route.
+then launched the application/server (uvicorn)
+and saw api docs (both swaggerUI and modern docs)
+
+- basic fastapi application code (2 lines):
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+- fastapi uses decorator for routes
+- home route: responds to GET request at root URL
+- to run fastapi application, use fastapi command (in CLI in fastapi application directory ofcouurse):
+
+fastapi dev main.py (if u installed fastapi using pip)
+uv run fastapi dev main.py (if u installed fastapi using uv)
+
+- u can run fastapi application in dev mode (fastapi dev command) OR production mode (fastapi run command)
+- in dev mode, it reloads the server whenever we make changes in our code (dev mode is best for development/debugging)
+- production mode is best for performance
+
+- code that creates the root/home route:
+
+@app.get("/")
+def home():
+    return {"message": "Hello, World!"}
+
+*fastapi converts this return dictionary into JSON first (automatically)
+
+/docs opens swaggerUI api docs (http://localhost:8000/docs)
+/redoc opens a modern api doc (http://localhost:8000/redoc)
+
+- api docs (swaggerUI) provide the exact command to write in terminal to get the response in CLI (instead of using the api docs)
+*this way you can test your apis through terminal/CLI as well (its more cool imo)
+
+for day4, continue from 14:49 (of video) AND before doing that, run the fastapi application (i.e. launch the server first)
