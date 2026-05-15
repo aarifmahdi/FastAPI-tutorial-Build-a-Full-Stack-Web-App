@@ -1,5 +1,30 @@
+CREATING THE FASTAPI PROJECT
 1. open cmd
 2. uv init project_name (run this command, it creates a project directory with some files)
-3. uv add fastapi[standard] (installs fastapi with additional tools)
-4. code . (opens vscode)
-5. cont'd...
+3. cd project_name
+4. uv add fastapi[standard] (installs fastapi with additional tools in project directory)
+5. code . (opens your fastapi project in vscode)
+
+BUILDING BASIC FASTAPI APPLICATION
+6. go to main.py (file in fastapi project ofcouurse)
+7. clear the code that's been written there (this was filled by the uv init command)
+8. import fastapi from FastAPI
+9. app = FastAPI()
+
+CREATE ROOT/HOME ROUTE
+10.
+
+@app.get("/")
+def home():
+    return {"message" : "hellow world"}
+
+RUN YOUR FASTAPI APPLICATION i.e. START THE SERVER (fastapi applications use uvicorn ASGI server)
+11. go to CLI
+12. uv run fastapi dev main.py (starts the server in development/dev mode)
+
+FASTAPI AUTOMATIC API DOCS
+go to the port 8000 of ur localhost to see ur application running (http://localhost:8000/ OR http://127.0.0.1:8000/ )
+go to http://127.0.0.1:8000/docs (SwaggerUI) OR http://127.0.0.1:8000/redoc (modern api docs)
+u can get the exact CLI/terminal command to get the api response in your terminal as well from the api docs (swaggerUI)
+
+13. CONT'D
