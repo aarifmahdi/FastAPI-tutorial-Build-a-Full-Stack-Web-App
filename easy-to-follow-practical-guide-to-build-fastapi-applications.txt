@@ -11,12 +11,12 @@ BUILDING BASIC FASTAPI APPLICATION
 8. import fastapi from FastAPI
 9. app = FastAPI()
 
-CREATE ROOT/HOME ROUTE
+CREATE "/" ROUTE (ROOT route/HOME route)
 10.
 
 @app.get("/")
 def home():
-    return {"message" : "hellow world"}
+    return {"message" : "hellow world"}    # fastapi converts this dictionary into JSON first (automatically)
 
 RUN YOUR FASTAPI APPLICATION i.e. START THE SERVER (fastapi applications use uvicorn ASGI server)
 11. go to CLI
@@ -27,4 +27,36 @@ go to the port 8000 of ur localhost to see ur application running (http://localh
 go to http://127.0.0.1:8000/docs (SwaggerUI) OR http://127.0.0.1:8000/redoc (modern api docs)
 u can get the exact CLI/terminal command to get the api response in your terminal as well from the api docs (swaggerUI)
 
-13. CONT'D
+*declare a list of dictionary (or write/create any dummy data, we're implementing a GET route that returns this dummy data on api endpoint)
+e.g: in your main.py copy paste this (after the fastapi application creation and before the routes)👇:
+
+posts: list[dict] = [
+    {
+        "id": 1,
+        "author": "Aarif Mahdi",
+        "title": "FastAPI is awesome",
+        "content": "this framework so easy and fast",
+        "date_posted": "May 16, 2026",
+    },
+    {
+        "id": 2,
+        "author": "William Wordsworth",
+        "title": "Python is GOD",
+        "content": "Python great for web dev",
+        "date_posted": "May 17, 2026",
+    }
+]
+
+CREATE "/api/posts" ROUTE (NOTE: "/api/posts" returns the posts, which is the dummy data you just created)
+13. 
+
+@app.get("/api/posts")
+def get_posts():
+    return posts    # fastapi converts this list into JSON Array
+
+now you can test this route (api endpoint) on your own.
+you know to test a route: 
+i. run the server
+ii. call the endpoint (eg: http://127.0.0.1:8000/api/posts) OR go to the api docs (http://127.0.0.1:8000/docs) and try it out there!
+iii. result/what to expect: you should see the data on the webpage (in this case, the posts data, that is the list of dictionary)
+
