@@ -1,7 +1,7 @@
 # FastAPI-tutorial-Build-a-Full-Stack-Web-App
 documenting my journey of learning FastAPI following corey schafer's videos.
 
-DAY 1 - 12th MAY 2026 (~ 25mins)
+DAY 1 - 13th MAY 2026 (~ 25mins)
 
 NOTES:
 Goal (by the end of this playlist): I will be able to Build a full feature web application (FastAPI)
@@ -58,7 +58,7 @@ we'll build (in this complete playlist):
 for day 2, continue from 5:00 (of video)
 
 
-DAY 2 - 13th May 2026 (~ 45mins)
+DAY 2 - 14th May 2026 (~ 45mins)
 
 NOTES:
 I'll be doing the following (today in in next few days):
@@ -108,7 +108,7 @@ code . (make sure you're in the project directory which you wanna open in vscode
 
 for day3, continue from 8:12 (of video)
 
-DAY 3 - 14th MAY 2026 (~ 25mins)
+DAY 3 - 15th MAY 2026 (~ 25mins)
 
 NOTES:
 today, i built basic fastapi application with two lines of code.
@@ -149,7 +149,7 @@ def home():
 
 for day4, continue from 14:49 (of video) AND before doing that, run the fastapi application (i.e. launch the server first)
 
-DAY 4 - 15th MAY 2026 (~ 20mins)
+DAY 4 - 16th MAY 2026 (~ 20mins)
 
 NOTES:
 today i created a route that returns JSON ("/api/posts" route)
