@@ -63,12 +63,12 @@ DAY 2 - 13th May 2026 (~ 45mins)
 NOTES:
 I'll be doing the following (today in in next few days):
 - install fastAPI ✅ (did today)
-- create a basic application
-- build routes (that return JSON)
-- run the app (from command line CLI)
-- look at automatic documentation
+- create a basic application ✅ (did on 14th May 2026)
+- build routes (that return JSON) ✅ (did on 14th May 2026 - still in process)
+- run the app (from command line CLI) ✅ (did on 14th May 2026 - and now it's an everyday job)
+- look at automatic documentation ✅ (did on 14th May 2026 - and now it's an everyday job, after building a route/api endpoint i have to look at this to test the api)
 - get dummy data
-- create an API endpoint
+- create an API endpoint ✅ (did on 14th May 2026 - still in process. i think routes and api endpoints are same thing but depending on context we call it route or api endpoint. just like the parameter/argument terms, when we write the code we use the term routes, when we search for the web page/api we call it api endpoint)
 - create HTML responses
 
 uv is a fast python package manager (alternative of pip python package manager)
@@ -148,3 +148,5 @@ def home():
 *this way you can test your apis through terminal/CLI as well (its more cool imo)
 
 for day4, continue from 14:49 (of video) AND before doing that, run the fastapi application (i.e. launch the server first)
+
+DAY 4 - 15th MAY 2026 (~ mins)
