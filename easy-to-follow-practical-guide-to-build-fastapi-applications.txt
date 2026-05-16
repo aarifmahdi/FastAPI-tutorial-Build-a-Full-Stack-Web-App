@@ -48,6 +48,7 @@ posts: list[dict] = [
 ]
 
 CREATE "/api/posts" ROUTE (NOTE: "/api/posts" returns the posts, which is the dummy data you just created)
+IMP/FYI: creating apis that return JSON data is great for programmatic access, frontend can get data this way or other services can get data too (this is FRONTEND talking to BACKEND ig)
 13. 
 
 @app.get("/api/posts")
@@ -60,3 +61,4 @@ i. run the server
 ii. call the endpoint (eg: http://127.0.0.1:8000/api/posts) OR go to the api docs (http://127.0.0.1:8000/docs) and try it out there!
 iii. result/what to expect: you should see the data on the webpage (in this case, the posts data, that is the list of dictionary)
 
+14.  CONT'D
