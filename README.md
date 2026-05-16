@@ -112,7 +112,7 @@ DAY 3 - 14th MAY 2026 (~ 25mins)
 
 NOTES:
 today, i built basic fastapi application with two lines of code.
-then i created a home route.
+then i created a home route "/".
 then launched the application/server (uvicorn)
 and saw api docs (both swaggerUI and modern docs)
 
@@ -149,4 +149,15 @@ def home():
 
 for day4, continue from 14:49 (of video) AND before doing that, run the fastapi application (i.e. launch the server first)
 
-DAY 4 - 15th MAY 2026 (~ mins)
+DAY 4 - 15th MAY 2026 (~ 20mins)
+
+NOTES:
+today i created a route that returns JSON ("/api/posts" route)
+tested this route (first way to test a route is by typing the URL on browser and seeing the results/response on the browser
+second way to test a route is to go to the fastapi api docs http://localhost:8000/docs and try it out there!)
+
+- returning JSON on an API endpoint (route) is GREAT for **PROGRAMMATIC ACCESS**
+- **PROGRAMMATIC ACCESS**: FRONTEND and other services can connect to BACKEND i.e. get this JSON data through programmatic acces (i.e. through these api endpoints/routes) 
+
+for day5, continue from 17:46 (of video) AND before doing that, run the fastapi application (i.e. launch the server first)
+day5 will be interesting cuz we r gonna return HTML page on an api endpoint (for humans/users to see)
