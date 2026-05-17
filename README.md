@@ -161,3 +161,8 @@ second way to test a route is to go to the fastapi api docs http://localhost:800
 
 for day5, continue from 17:46 (of video) AND before doing that, run the fastapi application (i.e. launch the server first)
 day5 will be interesting cuz we r gonna return HTML page on an api endpoint (for humans/users to see)
+
+
+DAY 5 - 17th MAY 2026 (~ mins)
+
+NOTES:
