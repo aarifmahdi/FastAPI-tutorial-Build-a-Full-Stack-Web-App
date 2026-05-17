@@ -67,9 +67,9 @@ I'll be doing the following (today in in next few days):
 - build routes (that return JSON) ✅ (did on 15th May 2026 - still in process)
 - run the app (from command line CLI) ✅ (did on 15th May 2026 - and now it's an everyday job)
 - look at automatic documentation ✅ (did on 15th May 2026 - and now it's an everyday job, after building a route/api endpoint i have to look at this to test the api)
-- get dummy data
+- get/return dummy data ✅ (both in HTML and JSON forms)
 - create an API endpoint ✅ (did on 15th May 2026 - still in process. i think routes and api endpoints are same thing but depending on context we call it route or api endpoint. just like the parameter/argument terms, when we write the code we use the term routes, when we search for the web page/api we call it api endpoint)
-- create HTML responses
+- create HTML responses ✅
 
 uv is a fast python package manager (alternative of pip python package manager)
 - To create a fastapi project, you can either:
@@ -163,6 +163,56 @@ for day5, continue from 17:46 (of video) AND before doing that, run the fastapi 
 day5 will be interesting cuz we r gonna return HTML page on an api endpoint (for humans/users to see)
 
 
-DAY 5 - 17th MAY 2026 (~ mins)
+DAY 5 - 17th MAY 2026 (~ 35mins)
 
 NOTES:
+to display HTML in browser (for humans/users):
+- make sure you have imported HTMLResponse from fastapi.repsonses
+- set the paramater response_class=HTMLResponse (in the decorator of your route)
+- return HTML in the function definiton
+e.g:
+                                                             👇
+@app.get("/", response_class=HTMLResponse)
+def home():
+    return f"<h1>{posts[0]['title']}</h1>"
+
+(test this api/route/endpoint, it should display/return HTML page in browser)
+
+Q: what if we want to return same HTML in browser on 2 routes?
+A: just stack the different routes on same route function
+e.g:
+@app.get("/", response_class=HTMLResponse, include_in_schema=False)
+@app.get("/posts", response_class=HTMLResponse, include_in_schema=False)
+def home():
+    return f"<h1>{posts[0]['title']}</h1>"
+
+👆here we stacked the routes on same route function home so now the home function is executed for route "/" as well as for rout "/posts"
+means when we got to http://127.0.0.1:8000/ it gives the same HTML as on http://127.0.0.1:8000/posts (pre-requisite: ofcouurse when the server is running)
+
+- learning: to get the same response on different routes in fastapi, simply stack the decorators/routes on the same route function
+
+*NOTE/POINT TO REMEMBER: the api docs (at http://127.0.0.1:8000/docs) are meant specially for api routes (api routes are used for programmatic access/consumption).
+HTML routes should not be dispayed in fastapi's api docs, HTML routes are for users to see in browser not for programmatic access/consumption)
+to hide HTML routes (or any route) in the api docs, set the parameter include_in_schema=False in the decorator of your route)
+e.g:                                          
+                                                           👇
+@app.get("/", response_class=HTMLResponse, include_in_schema=False)
+@app.get("/posts", response_class=HTMLResponse, include_in_schema=False)
+def home():
+    # return {"message": "Hello, World!"}  # fastapi converts this dictionary into JSON first (automatically)
+    return f"<h1>{posts[0]['title']}</h1>"
+
+(you should do this for HTML routes or any route(s) that are not api routes, only include api routes in api docs)
+
+api routes: routes that return JSON are api routes
+
+SUMMARY (DAY1-DAY5):
+✅ fastapi installed
+✅ created basic fastapi application
+✅ created routes
+✅ returns dummy data (both HTML and JSON forms)
+✅ we have automatic documentation (at http://127.0.0.1:8000/docs OR http://127.0.0.1:8000/redoc)
+✅ the docs only show api routes (not the HTML routes)
+
+NEXT TARGETs (DAY6 onwards)
+for day6, continue from 22:39 (on yt)
