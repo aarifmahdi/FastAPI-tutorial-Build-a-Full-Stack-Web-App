@@ -214,5 +214,35 @@ SUMMARY (DAY1-DAY5):
 ✅ we have automatic documentation (at http://127.0.0.1:8000/docs OR http://127.0.0.1:8000/redoc)
 ✅ the docs only show api routes (not the HTML routes)
 
+
+
 NEXT TARGETs (DAY6 onwards)
 for day6, continue from 22:39 (on yt)
+
+*day6 nahi kya.
+
+
+DAY 7 - 19th MAY 2026 (~ mins)
+
+JINJA2 TEMPLATES  (for API FRONTEND)
+
+Goal (to learn):
+- How to use templates in FastAPI
+
+templates: templates allow us to serve our HTML pages to users while still maintaining our JSON endpoints for backend APIs
+
+- we'll set up JINJA2 templates
+- pass data to templates
+- use JINJA2 syntax for (for loop and conditionals)
+- implement template inheritance (with layout.html
+- add bootstrap (for styling)
+-  setup static files (for CSS and images) 
+
+summary: this all will build a nicely looking home page (frontend)
+
+JINJA2: jinja2 is the templating engine (that fastAPI and Flask uses)
+
+- we import Request object from fastapi because Jinja2Templates require Request object.
+- we remove HTMLResponse (imported from fastapi.responses) because we ain't using html responses anymore, we r using templates now.
+- create templates directory in the project
+
