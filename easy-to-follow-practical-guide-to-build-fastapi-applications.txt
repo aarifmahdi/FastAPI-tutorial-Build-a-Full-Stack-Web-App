@@ -87,3 +87,11 @@ def home():
     # return {"message": "Hello, World!"}  # fastapi converts this dictionary into JSON first (automatically)
     return f"<h1>{posts[0]['title']}</h1>"
 
+USE JINJA2 TEMPLATES (to serve our HTML pages to users, maintaining our JSON endpoints for backend APIs)
+18. from fastapi import Request
+19. from fastapi.templating import Jinja2Templates
+(remove the line: from fastapi.responses import HTMLResponse) cuz we ain't using the html responses anymore , we r gonna use the templating (which is the right way to do it)
+
+*create a folder named "templates" in project (will use this directory to create templates object in our main.py, this templates object will be used by fastapi to look for templates files in the directory "templates")
+20. (write this line below your fastapi app creation and above the posts dummy data)
+templates = Jinja2Templates(directory="templates")
